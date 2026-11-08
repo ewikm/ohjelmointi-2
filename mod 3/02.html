@@ -1,0 +1,27 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Participants list</title>
+    </head>
+    <body>
+        <ol id="list"></ol>
+
+        <script>
+            "use strict";
+            
+            const count = Number(prompt("How many participants?: "));
+            const names = [];
+
+            for (let i = 0; i < count; i++) {
+                names.push(prompt("Enter name " + (i + 1)));
+            }
+
+            names.sort();
+
+            for (let i = 0; i < names.length; i ++) {
+                document.getElementById("list").innerHTML += "<li>" + names[i] + "</li>";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>leap years e.2</title>
+    </head>
+    <body>
+        <p id="target"></p>
+        <script>
+            "use strict";
+            const start = Number(prompt("Give the starting year: "));
+            const end = Number(prompt("Give the ending year: "));
+                document.write("<ul>");
+            for (let year = start; year <= end; year++) {
+                if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+                    document.write("<li>" + vuosi + "</li>");
+                }
+            }
+            document.write("</ul>");
+        </script>
+    </body>
+</html>

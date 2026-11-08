@@ -160,3 +160,8 @@ img.product-img {
     margin-bottom: 20px;
     font-style: italic;
 }
+.map {
+    flex: 2;
+    height: 320px;
+    margin-top: 40px;
+}

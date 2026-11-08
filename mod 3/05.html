@@ -1,0 +1,32 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>numbers 2</title>
+    </head>
+    <body>
+        <script>
+            "use strict";
+            const numbers = [];
+            let running = true;
+
+            while (running) {
+                const n = Number(prompt("Enter a number please: "));
+
+                if (numbers.includes(n)) {
+                    console.log("number " + n + " has already been given:");
+                    running = false;
+                } else {
+                    numbers.push(n);
+                }
+            }
+
+            numbers.sort(function (a, b) {
+                return a - b;
+            });
+            for (let i = 0; i < numbers.length; i++) {
+                console.log(numbers[i]);
+            }
+        </script>
+    </body>
+</html>
