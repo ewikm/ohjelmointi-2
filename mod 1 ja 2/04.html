@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>The Sorting Hat</title>
+    </head>
+    <body>
+        <p id="target"></p>
+
+        <script>
+            "use strict"
+            const student = prompt("Give your name please: ")
+            const number = Math.floor(Math.random() * 4) + 1;
+                let house;
+
+            if (number === 1) {
+                house = "Gryffindor"; 
+            } else if (number === 2) {
+                house = "Slytherin";
+            } else if (number === 3) {
+                house = "Hufflepuff";
+            } else {
+                house = "Ravenclaw";
+            }
+
+            document.querySelector("#target").innerHTML = 
+            student + ", You are in the house of " + house + ".";
+
+        </script>
+    </body>
+</html>

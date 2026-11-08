@@ -1,0 +1,27 @@
+*box-sizing{
+    box-sizing: border-box;
+}
+div.box{
+    width: 400px;
+    padding: 20px;
+    border: 4px solid black;
+    margin: 36px;
+    background-color: lightblue;
+}
+div p{
+    color: pink;
+}
+p:hover{
+    font-weight: bold;
+}
+li::marker {
+    color: red;
+}
+.container{
+    display: flex;
+    gap: 10px;
+    color: blue;
+    padding: 20px;
+    border: 1px solid black;
+    font-size: 20px;
+}
