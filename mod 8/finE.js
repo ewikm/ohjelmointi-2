@@ -1,18 +1,17 @@
 async function fetchDATA(osoite) {
     try {
-    const response = await fetch (osoite);
+    const response = await fetch(osoite);
     if (response.ok ) {
         const response_data = await response.json()
         return response_data
     } else {
-        throw new Error('HTTP-virhe! data ei ole haettu oikein: ${response.status}')
+        throw new Error(`HTTP-virhe! data ei ole haettu oikein: ${response.status}`)
     }
 } catch (error) {
-    console.log("virhe dataa haettaessa: ${error}")
+    console.log(`virhe dataa haettaessa: ${error}`)
 }
 
 }
-
 async function handle_pokemon_click(event, osoite){
     let pokemonData = await fetchDATA(osoite)
     let pokemonDiv = event.target.parentElement;
@@ -33,7 +32,7 @@ async function createPokemonView(){
         pokemonText.textContent = pokemon.name;
         pokemonText.addEventListener("click", (event) => handle_pokemon_click(event, pokemon.url))
         onePokemonDiv.appendChild(pokemonText)
-        pokemonDIV.appendChild(pokemonDIV);
+        pokemonDIV.appendChild(onePokemonDiv);
 
 
     }
